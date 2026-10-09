@@ -1,0 +1,2 @@
+# Repository-root manifest for Render; canonical app dependencies live here.
+-r healthradar/requirements.txt

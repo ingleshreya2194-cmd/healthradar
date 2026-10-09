@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Travel Check{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div class="wrap">
+    <h1>Travel Check</h1>
+    <p>Pick a destination to see which diseases are active there, the risk level and simple precautions.</p>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="card">
+    <label for="destination"><strong>Where are you travelling?</strong></label>
+    <div class="form-row">
+      <select id="destination" aria-label="Destination country"><option value="">Loading countries...</option></select>
+      <button class="btn" id="checkBtn" type="button">Check</button>
+    </div>
+  </div>
+
+  <div id="travelResult" aria-live="polite"></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/travel.js') }}"></script>
+{% endblock %}

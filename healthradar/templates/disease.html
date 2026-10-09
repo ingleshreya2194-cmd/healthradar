@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}{{ info.title }}{% endblock %}
+
+{% block content %}
+<section class="disease-hero">
+  <div class="wrap">
+    <h1>{{ info.title }}</h1>
+    <p style="margin:0;max-width:680px">{{ info.tagline }}</p>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="card" style="margin-bottom:14px">
+    <p style="margin:0">{{ info.overview }}</p>
+  </div>
+
+  <!-- The most important box comes first: when to get urgent help -->
+  <div class="card emergency" style="margin-bottom:14px">
+    <h2>See a doctor immediately if...</h2>
+    <p>{{ info.warning_signs_intro }}</p>
+    <ul>
+      {% for s in info.warning_signs %}<li>{{ s }}</li>{% endfor %}
+    </ul>
+  </div>
+
+  <div class="info-grid">
+    <div class="card info-card">
+      <h2>Symptoms</h2>
+      <ul>{% for s in info.symptoms %}<li>{{ s }}</li>{% endfor %}</ul>
+    </div>
+    <div class="card info-card">
+      <h2>How it spreads</h2>
+      <ul>{% for s in info.spread %}<li>{{ s }}</li>{% endfor %}</ul>
+    </div>
+    <div class="card info-card">
+      <h2>Prevention</h2>
+      <ul>{% for s in info.prevention %}<li>{{ s }}</li>{% endfor %}</ul>
+    </div>
+    <div class="card info-card">
+      <h2>Medical care</h2>
+      <p class="small muted">What doctors usually recommend. Always follow your own doctor's advice.</p>
+      <ul>{% for s in info.medical %}<li>{{ s }}</li>{% endfor %}</ul>
+    </div>
+    <div class="card info-card home-card" style="grid-column:1/-1">
+      <h2>Home care and comfort measures</h2>
+      <ul>{% for s in info.home_care %}<li>{{ s }}</li>{% endfor %}</ul>
+      <div class="note">{{ home_note }}</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>Where is {{ disease }} active now?</h3>
+    <p class="small muted">Open the <a href="{{ url_for('home') }}#risk-overview">global overview</a>, check a destination in <a href="{{ url_for('travel') }}">Travel Check</a>, or see your state in <a href="{{ url_for('local') }}">Local Mode</a>.</p>
+    <p class="sources"><strong>Based on guidance from:</strong> {{ info.sources | join('; ') }}. Check these sources for the latest advice.</p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,11 @@
+# Web server
+Flask>=3.0
+
+# Data handling
+pandas>=2.0
+numpy>=1.26
+
+# Machine learning (risk classifier + forecasting)
+scikit-learn>=1.4
+statsmodels>=0.14
+joblib>=1.3

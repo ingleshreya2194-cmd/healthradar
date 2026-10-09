@@ -1,0 +1,60 @@
+{
+  "model": "Random Forest (150 trees)",
+  "features": [
+    "cases_4w",
+    "growth_rate",
+    "population",
+    "cases_per_100k"
+  ],
+  "labels": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "train_rows": 11544,
+  "test_rows": 4056,
+  "test_period_start": "2026-04-12",
+  "accuracy": 0.9988,
+  "confusion_matrix": [
+    [
+      2235,
+      0,
+      0
+    ],
+    [
+      4,
+      1621,
+      0
+    ],
+    [
+      0,
+      1,
+      195
+    ]
+  ],
+  "per_class": {
+    "Low": {
+      "precision": 0.998,
+      "recall": 1.0,
+      "f1-score": 0.999
+    },
+    "Medium": {
+      "precision": 0.999,
+      "recall": 0.998,
+      "f1-score": 0.998
+    },
+    "High": {
+      "precision": 1.0,
+      "recall": 0.995,
+      "f1-score": 0.997
+    }
+  },
+  "feature_importance": {
+    "cases_4w": 0.1805,
+    "growth_rate": 0.1364,
+    "population": 0.0444,
+    "cases_per_100k": 0.6387
+  },
+  "forecast_method": "lag-regression",
+  "note": "Risk labels in the SAMPLE data come from a simple rule, so a high accuracy here only shows the pipeline works. It is not a claim about real-world performance. Use official alert levels as labels with real data."
+}

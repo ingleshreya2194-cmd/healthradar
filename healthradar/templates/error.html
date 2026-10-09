@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Problem{% endblock %}
+{% block content %}
+<section class="wrap section">
+  <div class="card notice-error">
+    <h1>Something is missing</h1>
+    <p>{{ message }}</p>
+    <p><a class="btn" href="{{ url_for('home') }}">Back to home</a></p>
+  </div>
+</section>
+{% endblock %}

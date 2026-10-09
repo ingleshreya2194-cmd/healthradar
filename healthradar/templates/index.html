@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Disease awareness and trends{% endblock %}
+
+{% block content %}
+<!-- Hero: the WHO photo is the first thing visitors see -->
+<section class="hero" aria-label="Welcome">
+  <div class="wrap">
+    <div class="hero-inner">
+      <h1>Know your health risks,<br>near and far.</h1>
+      <p class="lead">HealthRadar shows where Dengue, Flu and COVID-19 are active, how cases are changing, and simple steps to stay safe. Built for SDG 3: Good Health and Well-being.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#risk-overview">Explore country risk</a>
+        <a class="btn secondary" href="{{ url_for('travel') }}">Travel Check</a>
+        <a class="btn secondary" href="{{ url_for('local') }}">Local Mode</a>
+      </div>
+      <div class="hero-stats" id="heroStats" aria-live="polite"></div>
+    </div>
+    <div class="hero-credit">Image: World Health Organization</div>
+  </div>
+</section>
+
+<section class="wrap section" id="risk-overview">
+  <h2>Global risk overview</h2>
+  <p class="muted">Each card is a country. The colour shows its current risk level from our risk model. Select a country to see trends, a 4-week forecast and a travel note.</p>
+
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Search a country" aria-label="Search a country">
+    <select id="riskFilter" aria-label="Filter by risk level">
+      <option value="">All risk levels</option>
+      <option value="High">High only</option>
+      <option value="Medium">Medium only</option>
+      <option value="Low">Low only</option>
+    </select>
+  </div>
+  <div class="chips" id="diseaseChips" role="group" aria-label="Choose disease"></div>
+
+  <div class="legend">
+    <span><i class="dot Low"></i> Low</span>
+    <span><i class="dot Medium"></i> Medium</span>
+    <span><i class="dot High"></i> High</span>
+    <span id="dataDate"></span>
+  </div>
+
+  <div id="countryError"></div>
+  <div class="country-grid" id="countryGrid"><p class="loading">Loading countries...</p></div>
+</section>
+
+<!-- Side panel: slides in when a country is selected -->
+<div class="panel-backdrop" id="panelBackdrop"></div>
+<aside class="side-panel" id="sidePanel" aria-label="Country details" aria-hidden="true" tabindex="-1">
+  <div class="panel-head">
+    <div>
+      <h2 id="panelTitle">Country</h2>
+      <div id="panelRisk"></div>
+    </div>
+    <button class="close-btn" id="panelClose" aria-label="Close panel">&times;</button>
+  </div>
+  <div class="tabs" id="panelTabs" role="tablist"></div>
+  <div id="panelBody"></div>
+</aside>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

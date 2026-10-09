@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Model Info{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div class="wrap">
+    <h1>Model Info</h1>
+    <p>How the risk classifier and the forecast work, and how well they did on test data.</p>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div id="modelError"></div>
+  <div id="modelBody"><p class="loading">Loading model details...</p></div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>How it works</h3>
+    <ul>
+      <li><strong>Risk classifier:</strong> a Random Forest looks at cases in the last 4 weeks, the growth rate over the last 2 weeks, population and cases per 100,000 people, then labels a region Low, Medium or High.</li>
+      <li><strong>Forecast:</strong> predicts weekly cases for the next 4 weeks from past weekly cases. The shaded band on the charts shows a likely range, which gets wider further into the future.</li>
+      <li><strong>Limits:</strong> these are statistical estimates for awareness. They can be wrong and are not medical advice or an official health alert.</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/model.js') }}"></script>
+{% endblock %}

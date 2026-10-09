@@ -1,0 +1,10 @@
+disease,risk_level,advisory
+Dengue,Low,"Dengue activity looks low. Still, avoid mosquito bites during the day: use repellent, wear long sleeves and stay in screened or air-conditioned rooms."
+Dengue,Medium,"Dengue activity is moderate. Use insect repellent, wear long sleeves and trousers, use bed nets or screens, and remove standing water around where you stay. See a doctor if you get fever after travel."
+Dengue,High,"Dengue activity is high. Protect yourself from mosquito bites all day (repellent, long clothing, screens or nets) and avoid places with standing water. If you develop fever, joint pain or rash, see a doctor and watch for warning signs."
+Influenza,Low,"Flu activity looks low. Wash hands often and consider a seasonal flu vaccine, especially if you are in a higher-risk group."
+Influenza,Medium,"Flu activity is moderate. Get vaccinated if you can, wash hands often, and wear a mask in crowded indoor places. Stay home if you feel sick."
+Influenza,High,"Flu activity is high. Vaccination is recommended, wash hands often, wear a mask in crowded places, avoid close contact with sick people and stay home when ill. Seek care early if you are at higher risk."
+COVID-19,Low,COVID-19 activity looks low. Keep vaccinations up to date and stay home and test if you have symptoms.
+COVID-19,Medium,"COVID-19 activity is moderate. Stay up to date with vaccination, wear a mask in crowded or poorly ventilated places, wash hands, and test if you have symptoms."
+COVID-19,High,"COVID-19 activity is high. Stay up to date with vaccination, wear a mask in crowded or poorly ventilated places, improve ventilation, test if you have symptoms and isolate while sick. People at higher risk should talk to a doctor early."

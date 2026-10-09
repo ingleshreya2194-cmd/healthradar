@@ -1,0 +1,33 @@
+country,iso3,continent,population,lat,lon
+India,IND,Asia,1428000000,20.6,78.9
+Bangladesh,BGD,Asia,172000000,23.7,90.4
+Pakistan,PAK,Asia,240000000,30.4,69.3
+Sri Lanka,LKA,Asia,22000000,7.9,80.8
+Thailand,THA,Asia,72000000,15.9,100.99
+Vietnam,VNM,Asia,99000000,14.1,108.3
+Indonesia,IDN,Asia,277000000,-0.8,113.9
+Philippines,PHL,Asia,117000000,12.9,121.8
+Malaysia,MYS,Asia,34000000,4.2,101.98
+Singapore,SGP,Asia,5900000,1.35,103.8
+China,CHN,Asia,1412000000,35.9,104.2
+Japan,JPN,Asia,124000000,36.2,138.3
+United Arab Emirates,ARE,Asia,9500000,23.4,53.8
+Brazil,BRA,South America,216000000,-14.2,-51.9
+Argentina,ARG,South America,46000000,-38.4,-63.6
+Colombia,COL,South America,52000000,4.6,-74.1
+Peru,PER,South America,34000000,-9.2,-75.0
+Mexico,MEX,North America,128000000,23.6,-102.6
+United States,USA,North America,335000000,37.1,-95.7
+Canada,CAN,North America,40000000,56.1,-106.3
+United Kingdom,GBR,Europe,67000000,55.4,-3.4
+France,FRA,Europe,68000000,46.2,2.2
+Germany,DEU,Europe,84000000,51.2,10.5
+Italy,ITA,Europe,59000000,41.9,12.6
+Russia,RUS,Europe,144000000,61.5,105.3
+Nigeria,NGA,Africa,224000000,9.1,8.7
+Kenya,KEN,Africa,55000000,-0.02,37.9
+Ethiopia,ETH,Africa,126000000,9.1,40.5
+South Africa,ZAF,Africa,60000000,-30.6,22.9
+Egypt,EGY,Africa,112000000,26.8,30.8
+Australia,AUS,Oceania,26000000,-25.3,133.8
+New Zealand,NZL,Oceania,5200000,-40.9,174.9

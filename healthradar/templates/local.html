@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Local Mode{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <div class="wrap">
+    <h1>Local Mode</h1>
+    <p>See which diseases have the most cases in your state, with recent weekly records and a short forecast.</p>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="card">
+    <div id="locStatus" class="status" aria-live="polite">Asking your browser for your location...</div>
+    <p class="small muted">Your location is only used to find the nearest state. It is not stored. The match is approximate, so you can always pick a state yourself.</p>
+    <div class="form-row">
+      <button class="btn ghost" id="useLocation" type="button">Use my location</button>
+      <label for="stateSelect" class="small muted">or choose a state:</label>
+      <select id="stateSelect" aria-label="Choose a state"><option value="">Loading states...</option></select>
+    </div>
+  </div>
+
+  <div id="localResult" aria-live="polite"></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/local.js') }}"></script>
+{% endblock %}
